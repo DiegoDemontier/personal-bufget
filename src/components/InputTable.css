@@ -1,0 +1,231 @@
+.conteiner-form-expense, .edit-form-expense {
+  padding: 20px 15px 15px;
+  border-radius: 8px;
+  margin: auto;
+  width: 900px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 20px;
+  background: linear-gradient(
+    to left top,
+    rgba(255, 255, 255, 0.8),
+    rgba(255, 255, 255, 0.5)
+  );
+  box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.212);
+  align-items: end;
+}
+
+label, input, select {
+  color: #426696;
+  padding-left: 5px;
+}
+
+.conteiner-form-expense, .edit-form-expense label {
+  font-size: 20px;
+}
+
+.edit-form-expense {
+  grid-template-columns: repeat(6, 1fr);
+}
+
+.form_input{
+  border: solid 1px #1864ce;
+  background-color: white;
+  margin-top: 4px;
+  width: 150px;
+  height: 40px;
+  border-radius: 8px;
+  font-size: 20px;
+}
+
+.form_input::-webkit-calendar-picker-indicator{
+  margin-left: -15px;
+}
+
+.form_input::-webkit-inner-spin-button { 
+  -webkit-appearance: none;
+}
+
+.form_input:focus{
+  box-shadow: 0 0 10px #719ECE;
+}
+
+ .btn-input, .btn-salve, .btn-delete {
+  background: #B6DCFD;
+  border: solid 1px #1864ce;
+  height: 40px;
+  border-radius: 8px;
+  font-size: 16px;
+  color: #0f4080;
+  font-weight: 600;
+}
+
+@media (max-width: 950px) {
+  .conteiner-form-expense {
+    width: 660px;
+    grid-template-columns: 1fr  1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 10px;
+    grid-template-areas: "date category value"
+                         "description description btn"
+    ;
+  }
+
+  .edit-form-expense {
+    width: 660px;
+    grid-template-columns: 1fr  1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 10px;
+    grid-template-areas: "date category value"
+                         "description salve delete"
+    ;
+  }
+
+  .form_input {
+    width: 100%;
+  }
+
+  .btn-input {
+    grid-area: btn;
+  }
+
+  .btn-salve {
+    grid-area: salve;
+  }
+  
+  .btn-delete {
+    grid-area: delete;
+  }
+  
+  .input_category {
+    grid-area: category;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .input_value {
+    grid-area: value;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .input_date {
+    grid-area: date;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .input_description {
+    grid-area: description;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 700px) {
+  .conteiner-form-expense {
+    width: 70vw;
+    height: 240px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 10px;
+    grid-template-areas: "date category"
+                         "description value"
+                         "btn btn"
+    ;
+  }
+
+  .edit-form-expense {
+    width: 70vw;
+    height: 240px;
+    grid-template-columns: 1fr  1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 10px;
+    grid-template-areas: "date category"
+                         "value description"
+                         "salve delete"
+    ;
+  }
+
+  .form_input {
+    width: 100%;
+  }
+
+  .btn-input {
+    grid-area: btn;
+    height: 50px;
+  }
+
+  .btn-salve {
+    grid-area: salve;
+    height: 50px;
+  }
+  
+  .btn-delete {
+    grid-area: delete;
+    height: 50px;
+  }
+  
+  .input_category {
+    grid-area: category;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .input_value {
+    grid-area: value;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .input_date {
+    grid-area: date;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .input_description {
+    grid-area: description;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 500px) {
+  .conteiner-form-expense {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    justify-content: space-evenly;
+    align-items: center;
+    min-width: 300px;
+  }
+
+  .edit-form-expense {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .form_input {
+    width: 60vw;
+    min-width: 250px;
+  }
+
+  .btn-delete, .btn-salve {
+    margin-top: 10px;
+    height: 50px;
+    width: 60vw;
+    min-width: 250px;
+  }
+
+  .btn-input {
+    margin-top: 10px;
+    height: 50px;
+    width: 60vw;
+    min-width: 250px;
+  }
+
+}

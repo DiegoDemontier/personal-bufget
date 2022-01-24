@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+	box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+html,
+body {
+  background: linear-gradient(to right top, #65dfc9, #6cdbeb);
+  height: 100vh;
+}
+
+.App {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 30px;
+  justify-content: center;
+  justify-items: center;
+}
+
+.red {
+  color: #f17d7d;
+}
+
+.green {
+  color: rgb(140, 225, 79);
+}

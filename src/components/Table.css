@@ -1,0 +1,85 @@
+.conteiner-table {
+  margin: auto;
+  height: 40vh;
+  border-radius: 8px;
+  padding: 12px;
+  padding-top: 40px;
+  width: 900px;
+  background: linear-gradient(
+    to left top,
+    rgba(255, 255, 255, 0.8),
+    rgba(255, 255, 255, 0.5)
+  );
+  box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.212);
+}
+
+.table-body::before {
+	content: "";
+	display: block;
+	border-bottom: 4px solid #B6DCFD;
+	padding-top: 10px;
+}
+
+.table-head tr, .table-body tr {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr .5fr;
+  grid-gap: 20px;
+  justify-items: start;
+  align-items: end;
+}
+
+.table-body tr:first-child {
+  margin-top: 40px;
+}
+
+.table-head tr {
+  font-size: 20px;
+  color: #426696;
+}
+
+.table-body tr {
+  margin-top: 8px;
+  font-size: 20px;
+  font-weight: normal;
+  color: #426696;
+}
+
+.btn-edit {
+  background: #B6DCFD;
+  border: solid 1px #1864ce;
+  height: 32px;
+  width: 60px;
+  border-radius: 8px;
+  font-size: 16px;
+  color: #0f4080;
+  font-weight: 600;
+}
+
+.red {
+  color: #f17d7d;
+  font-weight: bold;
+}
+
+.green {
+  color: rgb(140, 225, 79);
+  font-weight: bold;
+}
+
+@media (max-width: 950px) {
+  .conteiner-table {
+    width: 660px;
+  }
+
+  .table-head tr, .table-body tr {
+    display: grid;
+    grid-gap: 10px;
+    justify-items: start;
+    align-items: end;
+  }
+}
+
+@media (max-width: 700px) {
+  .conteiner-table {
+    width: 70vw;
+  }
+}
